@@ -49,7 +49,7 @@ http://127.0.0.1:8787/public/
 
 - 운영 수집 주기: 1시간마다
 - 브라우저는 열린 상태에서도 1시간마다 `deals.json`을 다시 요청한다.
-- `scripts/hourly_collect.py`는 새 수집 결과를 검증하고, 소스 실패/중복 ID/한글 깨짐/비정상 저수집이 감지되면 이전 성공 JSON을 복원한다.
+- `scripts/hourly_collect.py`는 새 수집 결과를 검증하고, 소스 실패/중복 ID/한글 깨짐/비정상 저수집이 감지되면 해당 소스의 이전 성공 데이터를 유지한다.
 - 성공 실행은 조용히 `data/collection.log`와 `data/collection_status.json`만 갱신한다.
 - GitHub에서는 `.github/workflows/refresh-hotdeal-board.yml`이 매 정각 데이터를 수집하고 GitHub Pages를 재배포한다.
 - 가격/품절은 마지막 수집 시점 기준이며, 최종 조건은 원본 쇼핑몰에서 확인해야 한다.
