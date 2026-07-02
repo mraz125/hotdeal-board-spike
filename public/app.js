@@ -304,9 +304,13 @@ async function refreshData() {
   try {
     state.data = await loadData();
     $('#generatedAt').textContent = formatGeneratedAt(state.data.generated_at);
-    const ok = Object.values(state.data.manifest || {}).filter((m) => m.status === 'ok').length;
-    const total = Object.keys(state.data.manifest || {}).length;
-    $('#coverageText').textContent = `${ok}/${total} 소스 수집 성공 · ${UPDATE_CADENCE_LABEL}`;
+    const manifestRows = Object.values(state.data.manifest || {});
+    const ok = manifestRows.filter((m) => m.status === 'ok').length;
+    const stale = manifestRows.filter((m) => m.status === 'stale').length;
+    const total = manifestRows.length;
+    $('#coverageText').textContent = stale
+      ? `${ok}/${total} 신규 수집 성공 · ${stale}개 이전 데이터 유지 · ${UPDATE_CADENCE_LABEL}`
+      : `${ok}/${total} 소스 수집 성공 · ${UPDATE_CADENCE_LABEL}`;
     if (!controlsWired) {
       wireControls();
       controlsWired = true;

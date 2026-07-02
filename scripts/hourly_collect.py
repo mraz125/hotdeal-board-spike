@@ -27,6 +27,7 @@ BACKUP_DIR = PROJECT_ROOT / "data" / ".backups"
 MIN_TOTAL_DEALS = 100
 EXPECTED_SOURCES = {"kakao", "11st", "coupang", "naver", "ssg", "lotteon"}
 MOJIBAKE_RE = re.compile(r"[ëìíê�]")
+SEVERE_DROP_RATIO = 0.2
 
 
 def now_iso() -> str:
@@ -51,6 +52,103 @@ def restore(backups: dict[Path, Path]) -> None:
         shutil.copy2(backup, target)
 
 
+def load_previous_payload(backups: dict[Path, Path]) -> dict | None:
+    backup = backups.get(PUBLIC_OUT)
+    if not backup or not backup.exists():
+        return None
+    try:
+        return json.loads(backup.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001 - a corrupt backup should not break fresh valid output.
+        return None
+
+
+def rebuild_source_summary(payload: dict) -> None:
+    deals = payload.get("deals") or []
+    sources = payload.get("sources") or {}
+    by_source: dict[str, list[dict]] = {sid: [] for sid in sources}
+    for deal in deals:
+        by_source.setdefault(deal.get("source_id"), []).append(deal)
+
+    summary = {}
+    for sid, source in sources.items():
+        rows = by_source.get(sid, [])
+        categories: dict[str, int] = {}
+        discounts = []
+        for deal in rows:
+            label = ((deal.get("canonical_category") or {}).get("label")) or "기타"
+            categories[label] = categories.get(label, 0) + 1
+            discount = deal.get("discount_rate")
+            if isinstance(discount, int):
+                discounts.append(discount)
+        top_categories = sorted(categories.items(), key=lambda item: item[1], reverse=True)[:3]
+        checked_times = [deal["checked_at"] for deal in rows if deal.get("checked_at")]
+        summary[sid] = {
+            "source_id": sid,
+            "name": source.get("name"),
+            "deal_type": source.get("deal_type"),
+            "accent": source.get("accent"),
+            "count": len(rows),
+            "top_categories": top_categories,
+            "avg_discount": round(sum(discounts) / len(discounts)) if discounts else None,
+            "last_checked_at": max(checked_times) if checked_times else None,
+        }
+    payload["source_summary"] = summary
+
+
+def preserve_previous_on_source_drop(payload: dict, previous_payload: dict | None) -> list[str]:
+    if not previous_payload:
+        return []
+
+    previous_rows_by_source: dict[str, list[dict]] = {}
+    for deal in previous_payload.get("deals") or []:
+        previous_rows_by_source.setdefault(deal.get("source_id"), []).append(deal)
+
+    current_rows_by_source: dict[str, list[dict]] = {}
+    for deal in payload.get("deals") or []:
+        current_rows_by_source.setdefault(deal.get("source_id"), []).append(deal)
+
+    stale_sources = []
+    manifest = payload.setdefault("manifest", {})
+    for sid in sorted(EXPECTED_SOURCES):
+        previous_count = len(previous_rows_by_source.get(sid, []))
+        current_count = len(current_rows_by_source.get(sid, []))
+        severe_floor = max(1, int(previous_count * SEVERE_DROP_RATIO))
+        severe_drop = previous_count >= 10 and current_count < severe_floor
+        zero_drop = previous_count > 0 and current_count == 0
+        if not (zero_drop or severe_drop):
+            continue
+
+        stale_sources.append(sid)
+        current_rows_by_source[sid] = previous_rows_by_source[sid]
+        manifest[sid] = {
+            "status": "stale",
+            "count": previous_count,
+            "error": f"kept previous data because new count {current_count} dropped from previous {previous_count}",
+        }
+
+    if stale_sources:
+        merged_deals = []
+        seen_ids = set()
+        for sid in ["kakao", "11st", "coupang", "naver", "ssg", "lotteon"]:
+            for deal in current_rows_by_source.get(sid, []):
+                deal_id = deal.get("id")
+                if deal_id in seen_ids:
+                    continue
+                seen_ids.add(deal_id)
+                merged_deals.append(deal)
+        payload["deals"] = merged_deals
+        rebuild_source_summary(payload)
+    return stale_sources
+
+
+def write_payload(payload: dict) -> None:
+    text = json.dumps(payload, ensure_ascii=False, indent=2)
+    DATA_OUT.parent.mkdir(parents=True, exist_ok=True)
+    DATA_OUT.write_text(text, encoding="utf-8")
+    PUBLIC_OUT.parent.mkdir(parents=True, exist_ok=True)
+    PUBLIC_OUT.write_text(text, encoding="utf-8")
+
+
 def validate_payload(path: Path) -> tuple[dict, list[str]]:
     errors: list[str] = []
     payload = json.loads(path.read_text(encoding="utf-8"))
@@ -66,10 +164,14 @@ def validate_payload(path: Path) -> tuple[dict, list[str]]:
 
     bad_sources = {
         sid: meta for sid, meta in manifest.items()
-        if sid in EXPECTED_SOURCES and meta.get("status") != "ok"
+        if sid in EXPECTED_SOURCES and meta.get("status") not in {"ok", "stale"}
     }
     if bad_sources:
         errors.append(f"source errors: {bad_sources}")
+
+    zero_sources = [sid for sid in EXPECTED_SOURCES if (manifest.get(sid) or {}).get("count", 0) <= 0]
+    if zero_sources:
+        errors.append(f"zero-count sources: {sorted(zero_sources)}")
 
     ids = [deal.get("id") for deal in deals]
     duplicate_count = len(ids) - len(set(ids))
@@ -136,6 +238,10 @@ def main() -> int:
         )
 
     try:
+        payload = json.loads(PUBLIC_OUT.read_text(encoding="utf-8"))
+        stale_sources = preserve_previous_on_source_drop(payload, load_previous_payload(backups))
+        if stale_sources:
+            write_payload(payload)
         payload, errors = validate_payload(PUBLIC_OUT)
     except Exception as exc:  # noqa: BLE001 - scheduled runner should preserve old data on any parse failure.
         return fail(f"generated JSON validation crashed: {exc!r}; restored previous deals.json", backups)
@@ -147,7 +253,8 @@ def main() -> int:
     total = len(payload.get("deals") or [])
     manifest = payload.get("manifest") or {}
     counts = ", ".join(f"{sid}={manifest.get(sid, {}).get('count')}" for sid in sorted(EXPECTED_SOURCES))
-    append_log(f"OK total={total} {counts}")
+    stale_note = "" if not any((m or {}).get("status") == "stale" for m in manifest.values()) else " stale_sources=" + ",".join(sorted(sid for sid, m in manifest.items() if (m or {}).get("status") == "stale"))
+    append_log(f"OK total={total} {counts}{stale_note}")
     return 0
 
 
