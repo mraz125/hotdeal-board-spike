@@ -134,7 +134,7 @@ main {
 
 .control-actions {
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) 220px auto;
+  grid-template-columns: minmax(220px, 1fr) 220px;
   gap: 12px;
   align-items: center;
 }
@@ -168,22 +168,6 @@ main {
   min-width: 0;
 }
 
-.scroll-buttons {
-  display: flex;
-  gap: 8px;
-}
-
-.scroll-buttons button {
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 16px;
-  color: var(--ink);
-  font-weight: 900;
-}
-
-.scroll-buttons button:active,
 .category-btn:active,
 .deal-card:active { transform: translateY(1px); }
 
@@ -214,7 +198,50 @@ main {
 }
 
 .board-shell {
+  position: relative;
+  height: clamp(560px, calc(100dvh - 300px), 780px);
+  border: 1px solid rgba(18, 20, 23, 0.11);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.36)),
+    rgba(240, 242, 245, 0.68);
+  box-shadow: var(--shadow);
   overflow: hidden;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.board-shell::before,
+.board-shell::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 74px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.board-shell::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(245,246,248,0.88), transparent);
+}
+
+.board-shell::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(245,246,248,0.88), transparent);
+}
+
+.board-hint {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  padding: 12px 18px 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  text-align: right;
 }
 
 .lanes {
@@ -222,16 +249,32 @@ main {
   grid-auto-flow: column;
   grid-auto-columns: minmax(330px, 380px);
   gap: 18px;
+  min-height: 0;
+  height: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
+  overscroll-behavior-y: contain;
   scroll-snap-type: x proximity;
-  padding: 2px 2px 22px;
+  scroll-behavior: auto;
+  padding: 12px 18px 18px;
   scrollbar-width: thin;
+  cursor: grab;
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lanes.is-dragging,
+.lanes.is-auto-panning {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
 }
 
 .lane {
   scroll-snap-align: start;
-  min-height: 680px;
+  height: 100%;
+  min-height: 0;
   border: 1px solid rgba(18, 20, 23, 0.10);
   border-radius: 28px;
   background: rgba(255,255,255,0.84);
@@ -283,6 +326,11 @@ main {
   display: grid;
   gap: 12px;
   padding: 14px;
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 
 .deal-card {
@@ -469,19 +517,29 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .scroll-buttons { display: none; }
-
   .snapshot {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .board-shell {
+    height: clamp(520px, 68dvh, 720px);
+    border-radius: 24px;
+  }
+
+  .board-hint {
+    padding: 10px 14px 0;
+    text-align: left;
+  }
+
   .lanes {
     grid-auto-columns: minmax(86vw, 1fr);
+    padding: 10px 12px 14px;
   }
 }
 
 @media (max-width: 560px) {
   .lede { font-size: 16px; }
   .snapshot { grid-template-columns: 1fr; }
-  .lane { min-height: 620px; }
+  .board-shell { height: 68dvh; min-height: 500px; }
+  .board-hint { font-size: 11px; }
 }

@@ -15,6 +15,15 @@ const template = $('#dealCardTemplate');
 const DATA_REFRESH_INTERVAL_MS = 60 * 60 * 1000;
 const UPDATE_CADENCE_LABEL = '1시간마다 자동 갱신';
 let controlsWired = false;
+const boardPointer = {
+  inside: false,
+  dragging: false,
+  startX: 0,
+  startScrollLeft: 0,
+  velocity: 0,
+  frame: 0,
+  suppressClick: false,
+};
 
 const imageObserver = 'IntersectionObserver' in window
   ? new IntersectionObserver((entries) => {
@@ -81,6 +90,108 @@ function sourceCategoryText(deal) {
   return deal.source_category?.label || deal.deal_type;
 }
 
+function stopAutoPan() {
+  boardPointer.velocity = 0;
+  lanesEl.classList.remove('is-auto-panning');
+  if (boardPointer.frame) {
+    window.cancelAnimationFrame(boardPointer.frame);
+    boardPointer.frame = 0;
+  }
+}
+
+function runAutoPan() {
+  if (!boardPointer.inside || boardPointer.dragging || Math.abs(boardPointer.velocity) < 0.1) {
+    boardPointer.frame = 0;
+    return;
+  }
+  lanesEl.scrollLeft += boardPointer.velocity;
+  boardPointer.frame = window.requestAnimationFrame(runAutoPan);
+}
+
+function updateAutoPan(clientX) {
+  if (boardPointer.dragging) return;
+  const rect = lanesEl.getBoundingClientRect();
+  const edge = Math.min(180, rect.width * 0.24);
+  const leftDistance = clientX - rect.left;
+  const rightDistance = rect.right - clientX;
+  let velocity = 0;
+  if (leftDistance < edge) {
+    velocity = -Math.pow((edge - leftDistance) / edge, 2) * 18;
+  } else if (rightDistance < edge) {
+    velocity = Math.pow((edge - rightDistance) / edge, 2) * 18;
+  }
+  boardPointer.velocity = velocity;
+  lanesEl.classList.toggle('is-auto-panning', Math.abs(velocity) >= 0.1);
+  if (velocity && !boardPointer.frame) {
+    boardPointer.frame = window.requestAnimationFrame(runAutoPan);
+  }
+}
+
+function endBoardDrag(event) {
+  if (!boardPointer.dragging) return;
+  boardPointer.dragging = false;
+  lanesEl.classList.remove('is-dragging');
+  try {
+    lanesEl.releasePointerCapture(event.pointerId);
+  } catch {
+    // Pointer capture may already be released by the browser.
+  }
+  window.setTimeout(() => {
+    boardPointer.suppressClick = false;
+  }, 120);
+}
+
+function wireBoardNavigation() {
+  const startHoverPan = (event) => {
+    boardPointer.inside = true;
+    updateAutoPan(event.clientX);
+  };
+  const moveHoverPan = (event) => {
+    if (!boardPointer.dragging) updateAutoPan(event.clientX);
+  };
+  const stopHoverPan = () => {
+    boardPointer.inside = false;
+    stopAutoPan();
+  };
+  lanesEl.addEventListener('pointerenter', startHoverPan);
+  lanesEl.addEventListener('pointermove', (event) => {
+    if (boardPointer.dragging) {
+      const delta = event.clientX - boardPointer.startX;
+      if (Math.abs(delta) > 4) boardPointer.suppressClick = true;
+      lanesEl.scrollLeft = boardPointer.startScrollLeft - delta;
+      return;
+    }
+    updateAutoPan(event.clientX);
+  });
+  lanesEl.addEventListener('pointerleave', stopHoverPan);
+  lanesEl.addEventListener('mouseenter', startHoverPan);
+  lanesEl.addEventListener('mousemove', moveHoverPan);
+  lanesEl.addEventListener('mouseleave', stopHoverPan);
+  lanesEl.addEventListener('pointerdown', (event) => {
+    if (event.button !== 0 || event.target.closest('input, select, button')) return;
+    boardPointer.dragging = true;
+    boardPointer.startX = event.clientX;
+    boardPointer.startScrollLeft = lanesEl.scrollLeft;
+    stopAutoPan();
+    lanesEl.classList.add('is-dragging');
+    lanesEl.setPointerCapture(event.pointerId);
+  });
+  lanesEl.addEventListener('pointerup', endBoardDrag);
+  lanesEl.addEventListener('pointercancel', endBoardDrag);
+  lanesEl.addEventListener('click', (event) => {
+    if (!boardPointer.suppressClick) return;
+    event.preventDefault();
+    event.stopPropagation();
+    boardPointer.suppressClick = false;
+  }, true);
+  lanesEl.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      lanesEl.scrollBy({ left: event.key === 'ArrowLeft' ? -420 : 420, behavior: 'smooth' });
+      event.preventDefault();
+    }
+  });
+}
+
 function getFilteredDeals() {
   const q = state.query.trim().toLowerCase();
   return state.data.deals.filter((deal) => {
@@ -125,7 +236,7 @@ function renderFilters() {
   for (const [id, label] of Object.entries(state.data.canonical_categories)) {
     if (counts.has(id)) categories.push({ id, label, count: counts.get(id) });
   }
-  filtersEl.innerHTML = '';
+  filtersEl.replaceChildren();
   for (const cat of categories) {
     const btn = document.createElement('button');
     btn.className = `category-btn ${state.category === cat.id ? 'active' : ''}`;
@@ -250,7 +361,7 @@ function renderLane(source, deals) {
 }
 
 function renderLanes(filteredDeals) {
-  lanesEl.innerHTML = '';
+  lanesEl.replaceChildren();
   const bySource = new Map();
   for (const deal of filteredDeals) {
     if (!bySource.has(deal.source_id)) bySource.set(deal.source_id, []);
@@ -296,8 +407,7 @@ function wireControls() {
     state.sort = event.target.value;
     render();
   });
-  $('#scrollLeft').addEventListener('click', () => lanesEl.scrollBy({ left: -420, behavior: 'smooth' }));
-  $('#scrollRight').addEventListener('click', () => lanesEl.scrollBy({ left: 420, behavior: 'smooth' }));
+  wireBoardNavigation();
 }
 
 async function refreshData() {

@@ -38,17 +38,14 @@
             <option value="priceLow">딜 가격 낮은 순</option>
           </select>
         </label>
-        <div class="scroll-buttons" aria-label="쇼핑몰 레인 이동">
-          <button id="scrollLeft" type="button" aria-label="왼쪽 쇼핑몰 보기">←</button>
-          <button id="scrollRight" type="button" aria-label="오른쪽 쇼핑몰 보기">→</button>
-        </div>
       </div>
     </section>
 
     <section class="snapshot" id="snapshot"></section>
 
     <section class="board-shell" aria-label="쇼핑몰별 핫딜 레인">
-      <div class="lanes" id="lanes"></div>
+      <p class="board-hint">좌우 가장자리로 마우스를 가져가거나 드래그해서 이동 · 각 쇼핑몰 레인 안에서 세로 스크롤</p>
+      <div class="lanes" id="lanes" tabindex="0"></div>
     </section>
   </main>
 
