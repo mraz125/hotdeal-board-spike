@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>쇼핑몰 핫딜 보드</title>
+  <meta name="description" content="각 쇼핑몰이 지금 미는 핫딜과 타임딜을 좌우 레인으로 비교하는 보드" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-copy">
+      <p class="kicker">쇼핑몰별 타임딜 보드</p>
+      <h1>핫딜 보드</h1>
+      <p class="lede">최저가 비교가 아니라, 각 쇼핑몰이 지금 밀고 있는 딜을 이미지 중심으로 빠르게 비교합니다.</p>
+    </div>
+    <aside class="freshness-card" aria-live="polite">
+      <span>전체 갱신</span>
+      <strong id="generatedAt">불러오는 중</strong>
+      <small id="coverageText">소스 확인 중</small>
+    </aside>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="보드 필터">
+      <div class="category-strip" id="categoryFilters"></div>
+      <div class="control-actions">
+        <label class="search-box">
+          <span>검색</span>
+          <input id="searchInput" type="search" placeholder="상품명, 원본 카테고리" autocomplete="off" />
+        </label>
+        <label class="select-box">
+          <span>정렬</span>
+          <select id="sortSelect">
+            <option value="default">쇼핑몰 기본</option>
+            <option value="ending">마감 임박</option>
+            <option value="discount">할인율 높은 순</option>
+            <option value="priceLow">딜 가격 낮은 순</option>
+          </select>
+        </label>
+        <div class="scroll-buttons" aria-label="쇼핑몰 레인 이동">
+          <button id="scrollLeft" type="button" aria-label="왼쪽 쇼핑몰 보기">←</button>
+          <button id="scrollRight" type="button" aria-label="오른쪽 쇼핑몰 보기">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="snapshot" id="snapshot"></section>
+
+    <section class="board-shell" aria-label="쇼핑몰별 핫딜 레인">
+      <div class="lanes" id="lanes"></div>
+    </section>
+  </main>
+
+  <template id="dealCardTemplate">
+    <a class="deal-card" target="_blank" rel="noopener noreferrer">
+      <div class="thumb-wrap">
+        <img alt="" loading="lazy" />
+      </div>
+      <div class="card-topline">
+        <span class="source-pill"></span>
+        <span class="status-pill"></span>
+      </div>
+      <div class="card-body">
+        <h3></h3>
+        <p class="deal-note"></p>
+        <div class="price-row">
+          <div>
+            <span class="price-label"></span>
+            <strong class="deal-price"></strong>
+          </div>
+          <span class="discount-badge"></span>
+        </div>
+        <div class="category-line">
+          <span class="source-category"></span>
+          <span class="category-arrow">→</span>
+          <span class="canonical-category"></span>
+        </div>
+        <div class="meta-row">
+          <span class="time-left"></span>
+          <span class="checked-at"></span>
+        </div>
+        <div class="badge-row"></div>
+      </div>
+    </a>
+  </template>
+
+  <script src="./app.js"></script>
+</body>
+</html>
