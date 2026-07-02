@@ -258,16 +258,31 @@ main {
   scroll-behavior: auto;
   padding: 12px 18px 18px;
   scrollbar-width: thin;
-  cursor: grab;
+  cursor: default;
   touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
   align-items: start;
   scrollbar-gutter: stable both-edges;
 }
 
+.lanes.pan-left,
+.lanes.pan-left .deal-card {
+  cursor: w-resize;
+}
+
+.lanes.pan-right,
+.lanes.pan-right .deal-card {
+  cursor: e-resize;
+}
+
 .lanes.is-dragging,
-.lanes.is-auto-panning {
+.lanes.is-dragging .deal-card {
   cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+.lanes.is-auto-panning {
   scroll-snap-type: none;
   user-select: none;
 }
@@ -342,6 +357,7 @@ main {
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
   content-visibility: auto;
   contain-intrinsic-size: 430px;
+  cursor: pointer;
 }
 
 .deal-card:hover {

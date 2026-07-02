@@ -15,13 +15,19 @@ const template = $('#dealCardTemplate');
 const DATA_REFRESH_INTERVAL_MS = 60 * 60 * 1000;
 const UPDATE_CADENCE_LABEL = '1시간마다 자동 갱신';
 let controlsWired = false;
+const DRAG_START_THRESHOLD_PX = 8;
+
 const boardPointer = {
   inside: false,
+  pendingDrag: false,
   dragging: false,
+  pointerId: null,
   startX: 0,
+  startY: 0,
   startScrollLeft: 0,
   velocity: 0,
   frame: 0,
+  panDirection: null,
   suppressClick: false,
 };
 
@@ -90,8 +96,16 @@ function sourceCategoryText(deal) {
   return deal.source_category?.label || deal.deal_type;
 }
 
+function setPanDirection(direction) {
+  if (boardPointer.panDirection === direction) return;
+  boardPointer.panDirection = direction;
+  lanesEl.classList.toggle('pan-left', direction === 'left');
+  lanesEl.classList.toggle('pan-right', direction === 'right');
+}
+
 function stopAutoPan() {
   boardPointer.velocity = 0;
+  setPanDirection(null);
   lanesEl.classList.remove('is-auto-panning');
   if (boardPointer.frame) {
     window.cancelAnimationFrame(boardPointer.frame);
@@ -106,6 +120,7 @@ function horizontalScrollMax() {
 function runAutoPan() {
   if (!boardPointer.inside || boardPointer.dragging || Math.abs(boardPointer.velocity) < 0.1) {
     boardPointer.frame = 0;
+    setPanDirection(null);
     lanesEl.classList.remove('is-auto-panning');
     return;
   }
@@ -126,16 +141,21 @@ function updateAutoPan(clientX) {
   const leftDistance = clientX - rect.left;
   const rightDistance = rect.right - clientX;
   let velocity = 0;
+  let direction = null;
   if (leftDistance < edge) {
     velocity = -Math.pow((edge - leftDistance) / edge, 2) * 18;
+    direction = 'left';
   } else if (rightDistance < edge) {
     velocity = Math.pow((edge - rightDistance) / edge, 2) * 18;
+    direction = 'right';
   }
   const max = horizontalScrollMax();
   if ((velocity < 0 && lanesEl.scrollLeft <= 0) || (velocity > 0 && lanesEl.scrollLeft >= max)) {
     velocity = 0;
+    direction = null;
   }
   boardPointer.velocity = velocity;
+  setPanDirection(direction);
   if (Math.abs(velocity) < 0.1) {
     stopAutoPan();
     return;
@@ -146,18 +166,72 @@ function updateAutoPan(clientX) {
   }
 }
 
-function endBoardDrag(event) {
-  if (!boardPointer.dragging) return;
+function endBoardDrag(event = {}) {
+  if (!boardPointer.pendingDrag && !boardPointer.dragging) return;
+  const wasDragging = boardPointer.dragging;
+  boardPointer.pendingDrag = false;
   boardPointer.dragging = false;
+  boardPointer.pointerId = null;
   lanesEl.classList.remove('is-dragging');
-  try {
-    lanesEl.releasePointerCapture(event.pointerId);
-  } catch {
-    // Pointer capture may already be released by the browser.
+  if (wasDragging && typeof event.pointerId !== 'undefined') {
+    try {
+      lanesEl.releasePointerCapture(event.pointerId);
+    } catch {
+      // Pointer capture may already be released by the browser.
+    }
   }
-  window.setTimeout(() => {
+  if (wasDragging) {
+    window.setTimeout(() => {
+      boardPointer.suppressClick = false;
+    }, 120);
+  } else {
     boardPointer.suppressClick = false;
-  }, 120);
+  }
+}
+
+function startBoardDragCandidate(event) {
+  if (event.button !== 0 || event.target.closest('input, select, button')) return;
+  boardPointer.pendingDrag = true;
+  boardPointer.dragging = false;
+  boardPointer.pointerId = event.pointerId ?? null;
+  boardPointer.startX = event.clientX;
+  boardPointer.startY = event.clientY;
+  boardPointer.startScrollLeft = lanesEl.scrollLeft;
+  boardPointer.suppressClick = false;
+}
+
+function moveBoardPointer(event) {
+  if (boardPointer.pendingDrag && !boardPointer.dragging) {
+    const deltaX = event.clientX - boardPointer.startX;
+    const deltaY = event.clientY - boardPointer.startY;
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
+    if (absX >= DRAG_START_THRESHOLD_PX && absX > absY) {
+      boardPointer.pendingDrag = false;
+      boardPointer.dragging = true;
+      boardPointer.suppressClick = true;
+      stopAutoPan();
+      lanesEl.classList.add('is-dragging');
+      if (typeof event.pointerId !== 'undefined') {
+        try {
+          lanesEl.setPointerCapture(event.pointerId);
+        } catch {
+          // Pointer capture is best-effort; dragging still works without it.
+        }
+      }
+    } else if (absY >= DRAG_START_THRESHOLD_PX && absY > absX) {
+      boardPointer.pendingDrag = false;
+    }
+  }
+
+  if (boardPointer.dragging) {
+    const delta = event.clientX - boardPointer.startX;
+    lanesEl.scrollLeft = boardPointer.startScrollLeft - delta;
+    event.preventDefault();
+    return;
+  }
+
+  updateAutoPan(event.clientX);
 }
 
 function wireBoardNavigation() {
@@ -165,38 +239,25 @@ function wireBoardNavigation() {
     boardPointer.inside = true;
     updateAutoPan(event.clientX);
   };
-  const moveHoverPan = (event) => {
-    if (!boardPointer.dragging) updateAutoPan(event.clientX);
-  };
   const stopHoverPan = () => {
     boardPointer.inside = false;
+    boardPointer.pendingDrag = false;
     stopAutoPan();
   };
-  lanesEl.addEventListener('pointerenter', startHoverPan);
-  lanesEl.addEventListener('pointermove', (event) => {
-    if (boardPointer.dragging) {
-      const delta = event.clientX - boardPointer.startX;
-      if (Math.abs(delta) > 4) boardPointer.suppressClick = true;
-      lanesEl.scrollLeft = boardPointer.startScrollLeft - delta;
-      return;
-    }
-    updateAutoPan(event.clientX);
-  });
-  lanesEl.addEventListener('pointerleave', stopHoverPan);
-  lanesEl.addEventListener('mouseenter', startHoverPan);
-  lanesEl.addEventListener('mousemove', moveHoverPan);
-  lanesEl.addEventListener('mouseleave', stopHoverPan);
-  lanesEl.addEventListener('pointerdown', (event) => {
-    if (event.button !== 0 || event.target.closest('input, select, button')) return;
-    boardPointer.dragging = true;
-    boardPointer.startX = event.clientX;
-    boardPointer.startScrollLeft = lanesEl.scrollLeft;
-    stopAutoPan();
-    lanesEl.classList.add('is-dragging');
-    lanesEl.setPointerCapture(event.pointerId);
-  });
-  lanesEl.addEventListener('pointerup', endBoardDrag);
-  lanesEl.addEventListener('pointercancel', endBoardDrag);
+  const supportsPointerEvents = 'PointerEvent' in window;
+  const enterEvent = supportsPointerEvents ? 'pointerenter' : 'mouseenter';
+  const moveEvent = supportsPointerEvents ? 'pointermove' : 'mousemove';
+  const leaveEvent = supportsPointerEvents ? 'pointerleave' : 'mouseleave';
+  const downEvent = supportsPointerEvents ? 'pointerdown' : 'mousedown';
+  const upEvent = supportsPointerEvents ? 'pointerup' : 'mouseup';
+  const cancelEvent = supportsPointerEvents ? 'pointercancel' : 'mouseleave';
+
+  lanesEl.addEventListener(enterEvent, startHoverPan);
+  lanesEl.addEventListener(moveEvent, moveBoardPointer);
+  lanesEl.addEventListener(leaveEvent, stopHoverPan);
+  lanesEl.addEventListener(downEvent, startBoardDragCandidate);
+  window.addEventListener(upEvent, endBoardDrag);
+  window.addEventListener(cancelEvent, endBoardDrag);
   lanesEl.addEventListener('click', (event) => {
     if (!boardPointer.suppressClick) return;
     event.preventDefault();
