@@ -99,12 +99,23 @@ function stopAutoPan() {
   }
 }
 
+function horizontalScrollMax() {
+  return Math.max(0, lanesEl.scrollWidth - lanesEl.clientWidth);
+}
+
 function runAutoPan() {
   if (!boardPointer.inside || boardPointer.dragging || Math.abs(boardPointer.velocity) < 0.1) {
     boardPointer.frame = 0;
+    lanesEl.classList.remove('is-auto-panning');
     return;
   }
-  lanesEl.scrollLeft += boardPointer.velocity;
+  const max = horizontalScrollMax();
+  const next = Math.min(max, Math.max(0, lanesEl.scrollLeft + boardPointer.velocity));
+  if (next === lanesEl.scrollLeft) {
+    stopAutoPan();
+    return;
+  }
+  lanesEl.scrollLeft = next;
   boardPointer.frame = window.requestAnimationFrame(runAutoPan);
 }
 
@@ -120,9 +131,17 @@ function updateAutoPan(clientX) {
   } else if (rightDistance < edge) {
     velocity = Math.pow((edge - rightDistance) / edge, 2) * 18;
   }
+  const max = horizontalScrollMax();
+  if ((velocity < 0 && lanesEl.scrollLeft <= 0) || (velocity > 0 && lanesEl.scrollLeft >= max)) {
+    velocity = 0;
+  }
   boardPointer.velocity = velocity;
-  lanesEl.classList.toggle('is-auto-panning', Math.abs(velocity) >= 0.1);
-  if (velocity && !boardPointer.frame) {
+  if (Math.abs(velocity) < 0.1) {
+    stopAutoPan();
+    return;
+  }
+  lanesEl.classList.add('is-auto-panning');
+  if (!boardPointer.frame) {
     boardPointer.frame = window.requestAnimationFrame(runAutoPan);
   }
 }

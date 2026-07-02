@@ -199,7 +199,7 @@ main {
 
 .board-shell {
   position: relative;
-  height: clamp(560px, calc(100dvh - 300px), 780px);
+  height: clamp(700px, calc(100dvh - 180px), 900px);
   border: 1px solid rgba(18, 20, 23, 0.11);
   border-radius: 32px;
   background:
@@ -251,8 +251,7 @@ main {
   gap: 18px;
   min-height: 0;
   height: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
   overscroll-behavior-x: contain;
   overscroll-behavior-y: contain;
   scroll-snap-type: x proximity;
@@ -262,6 +261,8 @@ main {
   cursor: grab;
   touch-action: pan-x pan-y;
   -webkit-overflow-scrolling: touch;
+  align-items: start;
+  scrollbar-gutter: stable both-edges;
 }
 
 .lanes.is-dragging,
@@ -273,8 +274,8 @@ main {
 
 .lane {
   scroll-snap-align: start;
-  height: 100%;
-  min-height: 0;
+  height: auto;
+  min-height: 100%;
   border: 1px solid rgba(18, 20, 23, 0.10);
   border-radius: 28px;
   background: rgba(255,255,255,0.84);
@@ -326,11 +327,8 @@ main {
   display: grid;
   gap: 12px;
   padding: 14px;
-  min-height: 0;
-  flex: 1;
-  overflow-y: auto;
+  overflow: visible;
   overscroll-behavior: contain;
-  scrollbar-width: thin;
 }
 
 .deal-card {
@@ -522,7 +520,7 @@ main {
   }
 
   .board-shell {
-    height: clamp(520px, 68dvh, 720px);
+    height: clamp(640px, 74dvh, 820px);
     border-radius: 24px;
   }
 
@@ -540,6 +538,6 @@ main {
 @media (max-width: 560px) {
   .lede { font-size: 16px; }
   .snapshot { grid-template-columns: 1fr; }
-  .board-shell { height: 68dvh; min-height: 500px; }
+  .board-shell { height: 74dvh; min-height: 620px; }
   .board-hint { font-size: 11px; }
 }
