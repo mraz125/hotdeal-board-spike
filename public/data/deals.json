@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T17:07:54.786824+00:00",
+  "generated_at": "2026-08-30T20:24:48.464776+00:00",
   "contract": "browser loads this generated JSON; scheduled runner refreshes it hourly and preserves the previous successful file on unsafe output",
   "canonical_categories": {
     "food": "식품",
@@ -64,9 +64,9 @@
       "error": null
     },
     "coupang": {
-      "status": "ok",
+      "status": "stale",
       "count": 20,
-      "error": null
+      "error": "kept previous data because new count 0 dropped from previous 20"
     },
     "naver": {
       "status": "stale",
@@ -106,7 +106,7 @@
         ]
       ],
       "avg_discount": 48,
-      "last_checked_at": "2026-08-30T17:07:54.786824+00:00"
+      "last_checked_at": "2026-08-30T20:24:48.464776+00:00"
     },
     "coupang": {
       "source_id": "coupang",
@@ -152,7 +152,7 @@
         ]
       ],
       "avg_discount": 22,
-      "last_checked_at": "2026-08-30T17:07:54.786824+00:00"
+      "last_checked_at": "2026-08-30T20:24:48.464776+00:00"
     },
     "naver": {
       "source_id": "naver",
@@ -198,7 +198,7 @@
         ]
       ],
       "avg_discount": 13,
-      "last_checked_at": "2026-08-30T17:07:54.786824+00:00"
+      "last_checked_at": "2026-08-30T20:24:48.464776+00:00"
     },
     "lotteon": {
       "source_id": "lotteon",
@@ -221,7 +221,7 @@
         ]
       ],
       "avg_discount": 0,
-      "last_checked_at": "2026-08-30T17:07:54.786824+00:00"
+      "last_checked_at": "2026-08-30T20:24:48.464776+00:00"
     }
   },
   "deals": [
@@ -257,54 +257,13 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 3,468명"
+        "참여 3,500명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "하겐다즈공식몰"
-      }
-    },
-    {
-      "id": "kakao:62875729",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "냉장조리식품",
-        "path": [
-          "톡딜",
-          "냉장조리식품"
-        ]
-      },
-      "canonical_category": {
-        "id": "food",
-        "label": "식품",
-        "confidence": 0.8800000000000001,
-        "rule": "keyword:food"
-      },
-      "title": "[하남쭈꾸미]쭈꾸미/오징어볶음 5팩/3팩(딜)",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260121114113_576f0a7ade0f47fab58a4346ffd1c846.png",
-      "url": "https://store.kakao.com/hnzzu/products/62875729?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 42900,
-      "original_price": 52900,
-      "discount_rate": 18,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 1,694명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "하남쭈꾸미"
       }
     },
     {
@@ -339,13 +298,54 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 2,505명"
+        "참여 2,565명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "창억떡"
+      }
+    },
+    {
+      "id": "kakao:62875729",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "냉장조리식품",
+        "path": [
+          "톡딜",
+          "냉장조리식품"
+        ]
+      },
+      "canonical_category": {
+        "id": "food",
+        "label": "식품",
+        "confidence": 0.8800000000000001,
+        "rule": "keyword:food"
+      },
+      "title": "[하남쭈꾸미]쭈꾸미/오징어볶음 5팩/3팩(딜)",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260121114113_576f0a7ade0f47fab58a4346ffd1c846.png",
+      "url": "https://store.kakao.com/hnzzu/products/62875729?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 42900,
+      "original_price": 52900,
+      "discount_rate": 18,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 1,718명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "하남쭈꾸미"
       }
     },
     {
@@ -380,12 +380,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 2,162명"
+        "참여 2,200명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "동원공식샵"
       }
     },
@@ -421,12 +421,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,619명"
+        "참여 1,637명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "The미식"
       }
     },
@@ -462,12 +462,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,406명"
+        "참여 1,432명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "대한민국 일첩반상"
       }
     },
@@ -503,12 +503,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,002명"
+        "참여 1,020명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 337979,
+        "groupDiscountRemainSeconds": 326159,
         "storeName": "농심 브랜드스토어"
       }
     },
@@ -544,12 +544,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,593명"
+        "참여 1,628명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "장순필"
       }
     },
@@ -585,12 +585,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 437명"
+        "참여 444명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "사미헌"
       }
     },
@@ -626,12 +626,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 623명"
+        "참여 634명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "목우촌"
       }
     },
@@ -667,12 +667,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 442명"
+        "참여 456명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "본죽 공식몰 본몰"
       }
     },
@@ -708,12 +708,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 225명"
+        "참여 239명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "허닭프렌즈"
       }
     },
@@ -749,54 +749,13 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 627명"
+        "참여 643명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "홀푸드마켓"
-      }
-    },
-    {
-      "id": "kakao:653560042",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "한우 정육",
-        "path": [
-          "톡딜",
-          "한우 정육"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "[대한민국농수산] (농할) 1등급 암소한우 등심 500g",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20251209112000_2d5ce8f17c9e4f3b9dcf3fcb32bac9a4.png",
-      "url": "https://store.kakao.com/koreasusan/products/653560042?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 31900,
-      "original_price": 36900,
-      "discount_rate": 13,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 444명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "대한민국농수산"
       }
     },
     {
@@ -831,13 +790,54 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 568명"
+        "참여 589명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "유동 브랜드 스토어"
+      }
+    },
+    {
+      "id": "kakao:653560042",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "한우 정육",
+        "path": [
+          "톡딜",
+          "한우 정육"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "[대한민국농수산] (농할) 1등급 암소한우 등심 500g",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20251209112000_2d5ce8f17c9e4f3b9dcf3fcb32bac9a4.png",
+      "url": "https://store.kakao.com/koreasusan/products/653560042?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 31900,
+      "original_price": 36900,
+      "discount_rate": 13,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 449명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "대한민국농수산"
       }
     },
     {
@@ -872,12 +872,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 530명"
+        "참여 544명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "목우촌"
       }
     },
@@ -913,12 +913,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 627명"
+        "참여 636명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "청년상점"
       }
     },
@@ -956,92 +956,10 @@
         "참여 30명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 337979,
+        "groupDiscountRemainSeconds": 326159,
         "storeName": "웹투어(주)"
-      }
-    },
-    {
-      "id": "kakao:171612039",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "돼지고기 양념육",
-        "path": [
-          "톡딜",
-          "돼지고기 양념육"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "[1+1] 한돈 양념왕구이 1kg + 1kg",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20250428120449_9db92fdd218d4ae691112d07b88c626d.png",
-      "url": "https://store.kakao.com/sunsunara/products/171612039?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 17900,
-      "original_price": 29900,
-      "discount_rate": 40,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 525명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "순수나라"
-      }
-    },
-    {
-      "id": "kakao:38184262",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "감귤",
-        "path": [
-          "톡딜",
-          "감귤"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "(농할) 제주 하우스감귤 2.5kg 소과/중과/로얄과",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826112848_b252034e90cf420d94e1edb25a29e260.png",
-      "url": "https://store.kakao.com/jejuking/products/38184262?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 18900,
-      "original_price": 21900,
-      "discount_rate": 13,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 495명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "제주탐라왕"
       }
     },
     {
@@ -1076,13 +994,95 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 626명"
+        "참여 648명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "소막"
+      }
+    },
+    {
+      "id": "kakao:38184262",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "감귤",
+        "path": [
+          "톡딜",
+          "감귤"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "(농할) 제주 하우스감귤 2.5kg 소과/중과/로얄과",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826112848_b252034e90cf420d94e1edb25a29e260.png",
+      "url": "https://store.kakao.com/jejuking/products/38184262?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 18900,
+      "original_price": 21900,
+      "discount_rate": 13,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 505명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "제주탐라왕"
+      }
+    },
+    {
+      "id": "kakao:171612039",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "돼지고기 양념육",
+        "path": [
+          "톡딜",
+          "돼지고기 양념육"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "[1+1] 한돈 양념왕구이 1kg + 1kg",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20250428120449_9db92fdd218d4ae691112d07b88c626d.png",
+      "url": "https://store.kakao.com/sunsunara/products/171612039?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 17900,
+      "original_price": 29900,
+      "discount_rate": 40,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 533명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "순수나라"
       }
     },
     {
@@ -1117,12 +1117,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 378명"
+        "참여 391명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "한촌설렁탕"
       }
     },
@@ -1158,12 +1158,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 262명"
+        "참여 275명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "푸드앤픽"
       }
     },
@@ -1199,12 +1199,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 594명"
+        "참여 612명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "단골아저씨"
       }
     },
@@ -1240,54 +1240,13 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 589명"
+        "참여 602명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "피죤공식몰"
-      }
-    },
-    {
-      "id": "kakao:511070681",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "패션 귀걸이",
-        "path": [
-          "톡딜",
-          "패션 귀걸이"
-        ]
-      },
-      "canonical_category": {
-        "id": "fashion",
-        "label": "의류/패션",
-        "confidence": 0.78,
-        "rule": "keyword:fashion"
-      },
-      "title": "[르샵주얼리][무료반품/10%쿠폰]여름마지막 클리어런스 14K귀걸이/목걸이/반지/팔찌",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113120_e152fbf043b346e5bda82ee71d592f96.png",
-      "url": "https://store.kakao.com/leshopjewelry/products/511070681?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 11000,
-      "original_price": 72000,
-      "discount_rate": 84,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 614명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "르샵 주얼리"
       }
     },
     {
@@ -1322,13 +1281,54 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 239명"
+        "참여 247명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "메디트리 공식스토어"
+      }
+    },
+    {
+      "id": "kakao:511070681",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "패션 귀걸이",
+        "path": [
+          "톡딜",
+          "패션 귀걸이"
+        ]
+      },
+      "canonical_category": {
+        "id": "fashion",
+        "label": "의류/패션",
+        "confidence": 0.78,
+        "rule": "keyword:fashion"
+      },
+      "title": "[르샵주얼리][무료반품/10%쿠폰]여름마지막 클리어런스 14K귀걸이/목걸이/반지/팔찌",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113120_e152fbf043b346e5bda82ee71d592f96.png",
+      "url": "https://store.kakao.com/leshopjewelry/products/511070681?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 11000,
+      "original_price": 72000,
+      "discount_rate": 84,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 626명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "르샵 주얼리"
       }
     },
     {
@@ -1363,12 +1363,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 142명"
+        "참여 148명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "CJ제일제당 공식 스토어"
       }
     },
@@ -1404,12 +1404,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 322명"
+        "참여 326명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "wished"
       }
     },
@@ -1445,12 +1445,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 216명"
+        "참여 217명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "남양 공식스토어"
       }
     },
@@ -1486,12 +1486,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 276명"
+        "참여 280명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "쟌슨빌"
       }
     },
@@ -1527,12 +1527,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 345명"
+        "참여 356명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "The 자연채움"
       }
     },
@@ -1568,12 +1568,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 180명"
+        "참여 187명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "신세계푸드"
       }
     },
@@ -1609,12 +1609,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 315명"
+        "참여 319명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "농가살리기"
       }
     },
@@ -1650,12 +1650,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 165명"
+        "참여 170명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "신세계푸드"
       }
     },
@@ -1691,12 +1691,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 307명"
+        "참여 315명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "애경"
       }
     },
@@ -1732,12 +1732,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 266명"
+        "참여 267명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "동아오츠카SHOP"
       }
     },
@@ -1773,12 +1773,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 322명"
+        "참여 323명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "AFLOW STOCK"
       }
     },
@@ -1814,12 +1814,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 290명"
+        "참여 292명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "산지명인"
       }
     },
@@ -1858,9 +1858,9 @@
         "참여 113명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "데이배리어"
       }
     },
@@ -1896,12 +1896,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 203명"
+        "참여 206명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "샐리"
       }
     },
@@ -1937,12 +1937,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 122명"
+        "참여 124명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "CJ제일제당 공식 스토어"
       }
     },
@@ -1978,12 +1978,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 70명"
+        "참여 73명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "FULLY"
       }
     },
@@ -2019,12 +2019,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 342명"
+        "참여 351명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "상상앤드"
       }
     },
@@ -2063,9 +2063,9 @@
         "참여 130명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "GNM자연의품격"
       }
     },
@@ -2104,92 +2104,10 @@
         "참여 134명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "동원공식샵"
-      }
-    },
-    {
-      "id": "kakao:324702262",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "국/탕/찌개",
-        "path": [
-          "톡딜",
-          "국/탕/찌개"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "[밥꾹] 국내산 추어로 만든 프리미엄 추어탕 500g 5팩 외 국/탕/찌개 모음전",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113258_62404c2cc7734697815edce8d16e7079.png",
-      "url": "https://store.kakao.com/babdodukfood/products/324702262?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 14900,
-      "original_price": 24900,
-      "discount_rate": 40,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 180명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "밥도둑푸드"
-      }
-    },
-    {
-      "id": "kakao:573713211",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "탄산음료",
-        "path": [
-          "톡딜",
-          "탄산음료"
-        ]
-      },
-      "canonical_category": {
-        "id": "food",
-        "label": "식품",
-        "confidence": 0.78,
-        "rule": "keyword:food"
-      },
-      "title": "나랑드사이다 모음전 (오리지널,그린애플,파인애플)",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260730162523_e9d8774dbe484d0f8cc34d4e3b7a1384.png",
-      "url": "https://store.kakao.com/dongashop/products/573713211?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 12500,
-      "original_price": 16500,
-      "discount_rate": 24,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 209명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "동아오츠카SHOP"
       }
     },
     {
@@ -2224,13 +2142,136 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 93명"
+        "참여 97명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "크롬바이오"
+      }
+    },
+    {
+      "id": "kakao:573713211",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "탄산음료",
+        "path": [
+          "톡딜",
+          "탄산음료"
+        ]
+      },
+      "canonical_category": {
+        "id": "food",
+        "label": "식품",
+        "confidence": 0.78,
+        "rule": "keyword:food"
+      },
+      "title": "나랑드사이다 모음전 (오리지널,그린애플,파인애플)",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260730162523_e9d8774dbe484d0f8cc34d4e3b7a1384.png",
+      "url": "https://store.kakao.com/dongashop/products/573713211?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 12500,
+      "original_price": 16500,
+      "discount_rate": 24,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 214명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "동아오츠카SHOP"
+      }
+    },
+    {
+      "id": "kakao:324702262",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "국/탕/찌개",
+        "path": [
+          "톡딜",
+          "국/탕/찌개"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "[밥꾹] 국내산 추어로 만든 프리미엄 추어탕 500g 5팩 외 국/탕/찌개 모음전",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113258_62404c2cc7734697815edce8d16e7079.png",
+      "url": "https://store.kakao.com/babdodukfood/products/324702262?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 14900,
+      "original_price": 24900,
+      "discount_rate": 40,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 179명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "밥도둑푸드"
+      }
+    },
+    {
+      "id": "kakao:432418395",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "패드",
+        "path": [
+          "톡딜",
+          "패드"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "먼지없는 항균 케어 논슬립 누빔 사계절 침대패드. 8월 할인위크",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113023_c058cab397984c50bba170c8c3ad151d.png",
+      "url": "https://store.kakao.com/desinew/products/432418395?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 10900,
+      "original_price": 33900,
+      "discount_rate": 67,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 223명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "데시뉴"
       }
     },
     {
@@ -2265,12 +2306,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 82명"
+        "참여 84명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "AK뷰티공식몰"
       }
     },
@@ -2306,54 +2347,13 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 189명"
+        "참여 194명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "청년약단밤"
-      }
-    },
-    {
-      "id": "kakao:432418395",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "패드",
-        "path": [
-          "톡딜",
-          "패드"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "먼지없는 항균 케어 논슬립 누빔 사계절 침대패드. 8월 할인위크",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113023_c058cab397984c50bba170c8c3ad151d.png",
-      "url": "https://store.kakao.com/desinew/products/432418395?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 10900,
-      "original_price": 33900,
-      "discount_rate": 67,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 216명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "데시뉴"
       }
     },
     {
@@ -2391,9 +2391,9 @@
         "참여 66명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "핫트"
       }
     },
@@ -2429,12 +2429,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 61명"
+        "참여 62명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "오넛티"
       }
     },
@@ -2472,9 +2472,9 @@
         "참여 5명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 337979,
+        "groupDiscountRemainSeconds": 326159,
         "storeName": "웹투어(주)"
       }
     },
@@ -2510,13 +2510,54 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 43명"
+        "참여 46명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "심플아이콘"
+      }
+    },
+    {
+      "id": "kakao:48844947",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "계란",
+        "path": [
+          "톡딜",
+          "계란"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "[우체국쇼핑] 진안 김정학님의 늘푸른 메추리알 장조림 1kg*2봉(기본맛)",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20250515112847_865107c0d39147109b29dae7a487b509.png",
+      "url": "https://store.kakao.com/postkmall/products/48844947?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 16900,
+      "original_price": 20000,
+      "discount_rate": 15,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 99명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "우체국쇼핑몰"
       }
     },
     {
@@ -2554,51 +2595,10 @@
         "참여 54명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "핫트"
-      }
-    },
-    {
-      "id": "kakao:48844947",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "계란",
-        "path": [
-          "톡딜",
-          "계란"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "[우체국쇼핑] 진안 김정학님의 늘푸른 메추리알 장조림 1kg*2봉(기본맛)",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20250515112847_865107c0d39147109b29dae7a487b509.png",
-      "url": "https://store.kakao.com/postkmall/products/48844947?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 16900,
-      "original_price": 20000,
-      "discount_rate": 15,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 95명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "우체국쇼핑몰"
       }
     },
     {
@@ -2633,12 +2633,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 32명"
+        "참여 33명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "마크모크"
       }
     },
@@ -2674,12 +2674,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 137명"
+        "참여 150명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "심플아이콘"
       }
     },
@@ -2715,12 +2715,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 107명"
+        "참여 108명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "루나폴리"
       }
     },
@@ -2756,12 +2756,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 73명"
+        "참여 76명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "유니픽쳐x프롱화장품"
       }
     },
@@ -2797,12 +2797,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 56명"
+        "참여 58명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "중앙닭강정"
       }
     },
@@ -2838,13 +2838,95 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 92명"
+        "참여 94명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "명태잡는날"
+      }
+    },
+    {
+      "id": "kakao:361614671",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "일반세탁세제",
+        "path": [
+          "톡딜",
+          "일반세탁세제"
+        ]
+      },
+      "canonical_category": {
+        "id": "living",
+        "label": "생활",
+        "confidence": 0.78,
+        "rule": "keyword:living"
+      },
+      "title": "슈퍼딥큐 캡슐세제 포레스트 100개입 대용량 고농축 세탁세제 드럼 일반 겸용 모음전",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113030_68591459e9284e4aa329a79b736d4090.png",
+      "url": "https://store.kakao.com/godsungby/products/361614671?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 7900,
+      "original_price": 16900,
+      "discount_rate": 53,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 89명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "갓성비공식"
+      }
+    },
+    {
+      "id": "kakao:387366735",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "전복",
+        "path": [
+          "톡딜",
+          "전복"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "완도 활전복 1kg / 크기별(산소포장+세척솔 증정) 수령일선택 가능",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113251_b66a7e93fd37468895fe2b6ccf4de39a.png",
+      "url": "https://store.kakao.com/wandojini/products/387366735?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 21900,
+      "original_price": 60000,
+      "discount_rate": 63,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 32명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "완도군수산대전"
       }
     },
     {
@@ -2882,92 +2964,10 @@
         "참여 20명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "하츠공식스토어"
-      }
-    },
-    {
-      "id": "kakao:361614671",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "일반세탁세제",
-        "path": [
-          "톡딜",
-          "일반세탁세제"
-        ]
-      },
-      "canonical_category": {
-        "id": "living",
-        "label": "생활",
-        "confidence": 0.78,
-        "rule": "keyword:living"
-      },
-      "title": "슈퍼딥큐 캡슐세제 포레스트 100개입 대용량 고농축 세탁세제 드럼 일반 겸용 모음전",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113030_68591459e9284e4aa329a79b736d4090.png",
-      "url": "https://store.kakao.com/godsungby/products/361614671?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 7900,
-      "original_price": 16900,
-      "discount_rate": 53,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 86명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "갓성비공식"
-      }
-    },
-    {
-      "id": "kakao:387366735",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "전복",
-        "path": [
-          "톡딜",
-          "전복"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "완도 활전복 1kg / 크기별(산소포장+세척솔 증정) 수령일선택 가능",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113251_b66a7e93fd37468895fe2b6ccf4de39a.png",
-      "url": "https://store.kakao.com/wandojini/products/387366735?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 21900,
-      "original_price": 60000,
-      "discount_rate": 63,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 31명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "완도군수산대전"
       }
     },
     {
@@ -3005,9 +3005,9 @@
         "참여 45명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "동아오츠카SHOP"
       }
     },
@@ -3046,9 +3046,9 @@
         "참여 9명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "금강제화"
       }
     },
@@ -3087,9 +3087,9 @@
         "참여 20명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "오가닉디노"
       }
     },
@@ -3128,10 +3128,51 @@
         "참여 13명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "마이네임"
+      }
+    },
+    {
+      "id": "kakao:201493771",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "기타 건강기능식품",
+        "path": [
+          "톡딜",
+          "기타 건강기능식품"
+        ]
+      },
+      "canonical_category": {
+        "id": "food",
+        "label": "식품",
+        "confidence": 0.78,
+        "rule": "keyword:food"
+      },
+      "title": "마그네슘 솔루션 2박스/2개월분 + 마그네슘 솔루션 3일분 증정",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826112900_2b78718fab5e44db83017108fdacf551.png",
+      "url": "https://store.kakao.com/denpsmall/products/201493771?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 31800,
+      "original_price": 60000,
+      "discount_rate": 47,
+      "starts_at": "2026-08-30T08:00:00+00:00",
+      "ends_at": "2026-09-02T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 12명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "덴프스"
       }
     },
     {
@@ -3169,51 +3210,51 @@
         "참여 6명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "하츠공식스토어"
       }
     },
     {
-      "id": "kakao:201493771",
+      "id": "kakao:767695267",
       "source_id": "kakao",
       "source_name": "카카오 톡딜",
       "deal_type": "톡딜",
       "accent": "#f7d900",
       "source_home_url": "https://store.kakao.com/home/best",
       "source_category": {
-        "label": "기타 건강기능식품",
+        "label": "헬스보조식품",
         "path": [
           "톡딜",
-          "기타 건강기능식품"
+          "헬스보조식품"
         ]
       },
       "canonical_category": {
-        "id": "food",
-        "label": "식품",
+        "id": "sports",
+        "label": "스포츠/레저",
         "confidence": 0.78,
-        "rule": "keyword:food"
+        "rule": "keyword:sports"
       },
-      "title": "마그네슘 솔루션 2박스/2개월분 + 마그네슘 솔루션 3일분 증정",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826112900_2b78718fab5e44db83017108fdacf551.png",
-      "url": "https://store.kakao.com/denpsmall/products/201493771?area=mainp",
+      "title": "셀렉스 프로틴 베이직 선물세트",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826112915_ef7432db6b3e4574b8748e151e28ffe9.png",
+      "url": "https://store.kakao.com/maeilecommerce/products/767695267?area=mainp",
       "price_label": "톡딜가",
-      "deal_price": 31800,
-      "original_price": 60000,
-      "discount_rate": 47,
+      "deal_price": 43900,
+      "original_price": 105000,
+      "discount_rate": 58,
       "starts_at": "2026-08-30T08:00:00+00:00",
       "ends_at": "2026-09-02T14:59:59+00:00",
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 11명"
+        "참여 7명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "덴프스"
+        "groupDiscountRemainSeconds": 239759,
+        "storeName": "매일유업 직영스토어"
       }
     },
     {
@@ -3251,9 +3292,9 @@
         "참여 9명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "트리헛 공식몰"
       }
     },
@@ -3292,51 +3333,10 @@
         "참여 10명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "기프트몰"
-      }
-    },
-    {
-      "id": "kakao:767695267",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "헬스보조식품",
-        "path": [
-          "톡딜",
-          "헬스보조식품"
-        ]
-      },
-      "canonical_category": {
-        "id": "sports",
-        "label": "스포츠/레저",
-        "confidence": 0.78,
-        "rule": "keyword:sports"
-      },
-      "title": "셀렉스 프로틴 베이직 선물세트",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826112915_ef7432db6b3e4574b8748e151e28ffe9.png",
-      "url": "https://store.kakao.com/maeilecommerce/products/767695267?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 43900,
-      "original_price": 105000,
-      "discount_rate": 58,
-      "starts_at": "2026-08-30T08:00:00+00:00",
-      "ends_at": "2026-09-02T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 5명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
-        "storeName": "매일유업 직영스토어"
       }
     },
     {
@@ -3371,12 +3371,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 6명"
+        "참여 8명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "아이엠키친"
       }
     },
@@ -3415,9 +3415,9 @@
         "참여 3명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "아이엠키친"
       }
     },
@@ -3456,9 +3456,9 @@
         "참여 1명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "JBK코리아"
       }
     },
@@ -3496,9 +3496,9 @@
         "무료배송"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "휴롬"
       }
     },
@@ -3534,12 +3534,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,684명"
+        "참여 1,687명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "마더킴"
       }
     },
@@ -3575,12 +3575,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 2,757명"
+        "참여 2,769명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "신세계푸드"
       }
     },
@@ -3616,12 +3616,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,729명"
+        "참여 1,736명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "광천김_공식스토어"
       }
     },
@@ -3657,12 +3657,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,805명"
+        "참여 1,818명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "진주햄공식스토어"
       }
     },
@@ -3698,12 +3698,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,774명"
+        "참여 1,776명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "청년상점"
       }
     },
@@ -3739,12 +3739,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,365명"
+        "참여 1,368명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "비너스"
       }
     },
@@ -3780,12 +3780,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 909명"
+        "참여 913명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "미스터밀크"
       }
     },
@@ -3824,9 +3824,9 @@
         "참여 1,000명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "농가살리기"
       }
     },
@@ -3862,12 +3862,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 2,403명"
+        "참여 2,417명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "완도맘"
       }
     },
@@ -3903,12 +3903,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 830명"
+        "참여 835명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "(주)모나리자"
       }
     },
@@ -3944,12 +3944,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 778명"
+        "참여 791명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "직판"
       }
     },
@@ -3987,9 +3987,9 @@
         "참여 88명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "웹투어(주)"
       }
     },
@@ -4025,12 +4025,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,004명"
+        "참여 1,007명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "폴햄"
       }
     },
@@ -4066,12 +4066,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 591명"
+        "참여 596명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "목우촌"
       }
     },
@@ -4107,12 +4107,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,060명"
+        "참여 1,063명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "단골아저씨"
       }
     },
@@ -4148,12 +4148,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 737명"
+        "참여 743명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "센토SHOP"
       }
     },
@@ -4189,12 +4189,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 978명"
+        "참여 987명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "제철자연그린"
       }
     },
@@ -4230,12 +4230,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 405명"
+        "참여 404명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "바겐슈타이거"
       }
     },
@@ -4271,12 +4271,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,182명"
+        "참여 1,185명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "대한민국 일첩반상"
       }
     },
@@ -4312,12 +4312,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 592명"
+        "참여 598명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "김총각네 김부각"
       }
     },
@@ -4353,12 +4353,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 501명"
+        "참여 504명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "그리심"
       }
     },
@@ -4394,12 +4394,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 498명"
+        "참여 502명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "영주마실"
       }
     },
@@ -4435,12 +4435,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 594명"
+        "참여 597명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "참도깨비"
       }
     },
@@ -4476,12 +4476,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 892명"
+        "참여 906명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "장인의주방GL"
       }
     },
@@ -4517,12 +4517,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 681명"
+        "참여 684명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "밥도둑푸드"
       }
     },
@@ -4558,12 +4558,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 1,007명"
+        "참여 1,018명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "우체국쇼핑몰"
       }
     },
@@ -4599,54 +4599,13 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 308명"
+        "참여 309명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "하림 공식몰"
-      }
-    },
-    {
-      "id": "kakao:95639405",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "쟁반",
-        "path": [
-          "톡딜",
-          "쟁반"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "바겐슈타이거 연마제없는 스텐 트레이 세트 pc커버 외 트레이모음전",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113413_294ec959cf954c4a86c3d11d1f88c368.png",
-      "url": "https://store.kakao.com/wagensteiger/products/95639405?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 39000,
-      "original_price": 79000,
-      "discount_rate": 50,
-      "starts_at": "2026-08-29T08:00:00+00:00",
-      "ends_at": "2026-09-01T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 186명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
-        "storeName": "바겐슈타이거"
       }
     },
     {
@@ -4681,13 +4640,54 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 2,876명"
+        "참여 2,937명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "맘스럽"
+      }
+    },
+    {
+      "id": "kakao:95639405",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "쟁반",
+        "path": [
+          "톡딜",
+          "쟁반"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "바겐슈타이거 연마제없는 스텐 트레이 세트 pc커버 외 트레이모음전",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113413_294ec959cf954c4a86c3d11d1f88c368.png",
+      "url": "https://store.kakao.com/wagensteiger/products/95639405?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 39000,
+      "original_price": 79000,
+      "discount_rate": 50,
+      "starts_at": "2026-08-29T08:00:00+00:00",
+      "ends_at": "2026-09-01T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 188명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 153359,
+        "storeName": "바겐슈타이거"
       }
     },
     {
@@ -4722,12 +4722,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 774명"
+        "참여 776명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "동원공식샵"
       }
     },
@@ -4763,12 +4763,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 339명"
+        "참여 345명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "알래스카"
       }
     },
@@ -4807,9 +4807,9 @@
         "참여 35명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "JayKay"
       }
     },
@@ -4848,9 +4848,9 @@
         "참여 156명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "마크모크"
       }
     },
@@ -4886,12 +4886,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 314명"
+        "참여 317명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "오브휴"
       }
     },
@@ -4930,9 +4930,9 @@
         "참여 128명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "우아한에프앤비"
       }
     },
@@ -4968,12 +4968,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 368명"
+        "참여 369명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "메종오브제 공식스토어"
       }
     },
@@ -5012,9 +5012,9 @@
         "참여 196명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "아이엠프레쉬"
       }
     },
@@ -5053,9 +5053,9 @@
         "참여 166명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "The 자연채움"
       }
     },
@@ -5091,12 +5091,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 406명"
+        "참여 408명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "농업회사법인더미들래주식회사"
       }
     },
@@ -5132,12 +5132,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 135명"
+        "참여 136명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "직판"
       }
     },
@@ -5173,12 +5173,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 227명"
+        "참여 232명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "썬리지"
       }
     },
@@ -5214,12 +5214,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 224명"
+        "참여 226명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "앤드류앤코"
       }
     },
@@ -5255,12 +5255,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 232명"
+        "참여 233명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "홀라이프"
       }
     },
@@ -5296,12 +5296,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 184명"
+        "참여 186명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "서영 수입식자재 직영몰"
       }
     },
@@ -5337,12 +5337,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 364명"
+        "참여 365명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "NANOLAB"
       }
     },
@@ -5378,12 +5378,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 170명"
+        "참여 172명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "익스트림"
       }
     },
@@ -5422,9 +5422,9 @@
         "참여 73명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "현대프리미엄아울렛S1"
       }
     },
@@ -5463,9 +5463,9 @@
         "참여 204명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "홈스웰"
       }
     },
@@ -5501,12 +5501,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 146명"
+        "참여 147명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "동구밭"
       }
     },
@@ -5542,12 +5542,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 123명"
+        "참여 124명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "리얼닥터"
       }
     },
@@ -5583,12 +5583,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 153명"
+        "참여 157명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "지오지아"
       }
     },
@@ -5624,12 +5624,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 101명"
+        "참여 103명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 251579,
+        "groupDiscountRemainSeconds": 239759,
         "storeName": "풀무원 공식 스토어"
       }
     },
@@ -5665,12 +5665,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 37명"
+        "참여 38명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "우신글로벌"
       }
     },
@@ -5706,54 +5706,13 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 168명"
+        "참여 172명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "조선팔도떡집"
-      }
-    },
-    {
-      "id": "kakao:708436762",
-      "source_id": "kakao",
-      "source_name": "카카오 톡딜",
-      "deal_type": "톡딜",
-      "accent": "#f7d900",
-      "source_home_url": "https://store.kakao.com/home/best",
-      "source_category": {
-        "label": "여성 라운드넥 티셔츠",
-        "path": [
-          "톡딜",
-          "여성 라운드넥 티셔츠"
-        ]
-      },
-      "canonical_category": {
-        "id": "fashion",
-        "label": "의류/패션",
-        "confidence": 0.78,
-        "rule": "keyword:fashion"
-      },
-      "title": "모어오브 가을 신상 입고! 100종 특가, 티셔츠/원피스/팬츠 외",
-      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113757_bcd38b6e5daa4a4894e2aaf952f3f9ae.png",
-      "url": "https://store.kakao.com/fashionplus/products/708436762?area=mainp",
-      "price_label": "톡딜가",
-      "deal_price": 7900,
-      "original_price": 8700,
-      "discount_rate": 9,
-      "starts_at": "2026-08-29T08:00:00+00:00",
-      "ends_at": "2026-09-01T14:59:59+00:00",
-      "badges": [
-        "톡딜가",
-        "무료배송",
-        "참여 199명"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
-        "storeName": "패션플러스"
       }
     },
     {
@@ -5788,13 +5747,54 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 51명"
+        "참여 54명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "동국제약 뉴트리션"
+      }
+    },
+    {
+      "id": "kakao:708436762",
+      "source_id": "kakao",
+      "source_name": "카카오 톡딜",
+      "deal_type": "톡딜",
+      "accent": "#f7d900",
+      "source_home_url": "https://store.kakao.com/home/best",
+      "source_category": {
+        "label": "여성 라운드넥 티셔츠",
+        "path": [
+          "톡딜",
+          "여성 라운드넥 티셔츠"
+        ]
+      },
+      "canonical_category": {
+        "id": "fashion",
+        "label": "의류/패션",
+        "confidence": 0.78,
+        "rule": "keyword:fashion"
+      },
+      "title": "모어오브 가을 신상 입고! 100종 특가, 티셔츠/원피스/팬츠 외",
+      "image_url": "https://st.kakaocdn.net/thumb/C750x422.fjpg/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fshoppingstore%2Fhome%2Fgroup_discount_product%2F20260826113757_bcd38b6e5daa4a4894e2aaf952f3f9ae.png",
+      "url": "https://store.kakao.com/fashionplus/products/708436762?area=mainp",
+      "price_label": "톡딜가",
+      "deal_price": 7900,
+      "original_price": 8700,
+      "discount_rate": 9,
+      "starts_at": "2026-08-29T08:00:00+00:00",
+      "ends_at": "2026-09-01T14:59:59+00:00",
+      "badges": [
+        "톡딜가",
+        "무료배송",
+        "참여 200명"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "groupDiscountRemainSeconds": 153359,
+        "storeName": "패션플러스"
       }
     },
     {
@@ -5829,12 +5829,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 38명"
+        "참여 39명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "앤드지"
       }
     },
@@ -5870,12 +5870,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 159명"
+        "참여 162명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "디얼리빙"
       }
     },
@@ -5911,12 +5911,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 118명"
+        "참여 122명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "브라더커머스"
       }
     },
@@ -5955,9 +5955,9 @@
         "참여 68명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "일류농사꾼"
       }
     },
@@ -5995,9 +5995,9 @@
         "참여 8명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "와이에스제이랩스"
       }
     },
@@ -6036,9 +6036,9 @@
         "참여 27명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "에이페"
       }
     },
@@ -6077,9 +6077,9 @@
         "참여 99명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "SK스토아_m"
       }
     },
@@ -6115,12 +6115,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 50명"
+        "참여 51명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "풀무원 공식 스토어"
       }
     },
@@ -6159,9 +6159,9 @@
         "참여 31명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "아키클래식"
       }
     },
@@ -6200,9 +6200,9 @@
         "참여 2명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "Rethink"
       }
     },
@@ -6238,12 +6238,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 44명"
+        "참여 47명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "제철담음"
       }
     },
@@ -6282,9 +6282,9 @@
         "참여 74명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "레인보우샵"
       }
     },
@@ -6323,9 +6323,9 @@
         "참여 44명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "아이엠키친"
       }
     },
@@ -6364,9 +6364,9 @@
         "참여 65명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "하이슈퍼히어로"
       }
     },
@@ -6404,9 +6404,9 @@
         "참여 1명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "트립스토어"
       }
     },
@@ -6442,12 +6442,12 @@
       "badges": [
         "톡딜가",
         "무료배송",
-        "참여 24명"
+        "참여 25명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "듀먼_Dhuman"
       }
     },
@@ -6486,9 +6486,9 @@
         "참여 7명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "기프트몰"
       }
     },
@@ -6527,9 +6527,9 @@
         "참여 59명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "UBAC"
       }
     },
@@ -6568,92 +6568,10 @@
         "참여 1명"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "groupDiscountRemainSeconds": 165179,
+        "groupDiscountRemainSeconds": 153359,
         "storeName": "비프록셀"
-      }
-    },
-    {
-      "id": "11st:9283708414",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "붓기제거 지압관리 비비온 에어바운스 SR139",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9283708414/D.webp?579619911",
-      "url": "https://www.11st.co.kr/products/9283708414",
-      "price_label": "타임딜가",
-      "deal_price": 25800,
-      "original_price": 26800,
-      "discount_rate": 4,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대1,460P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "4,858",
-        "limitQty": "400"
-      }
-    },
-    {
-      "id": "11st:2925409095",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "인테로 알티지 오메가3 밸런스 90캡슐, 3개월분 외",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/2925409095/D.webp?315551320",
-      "url": "https://www.11st.co.kr/products/2925409095",
-      "price_label": "타임딜가",
-      "deal_price": 21040,
-      "original_price": 26300,
-      "discount_rate": 20,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대1,222P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "1,278",
-        "limitQty": "500"
       }
     },
     {
@@ -6691,10 +6609,92 @@
         "11pay 최대704P적립"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "selQty": "55",
+        "selQty": "73",
         "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:2925409095",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "인테로 알티지 오메가3 밸런스 90캡슐, 3개월분 외",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/2925409095/D.webp?315551320",
+      "url": "https://www.11st.co.kr/products/2925409095",
+      "price_label": "타임딜가",
+      "deal_price": 21040,
+      "original_price": 26300,
+      "discount_rate": 20,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대1,222P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "1,280",
+        "limitQty": "500"
+      }
+    },
+    {
+      "id": "11st:9283708414",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "붓기제거 지압관리 비비온 에어바운스 SR139",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9283708414/D.webp?579619911",
+      "url": "https://www.11st.co.kr/products/9283708414",
+      "price_label": "타임딜가",
+      "deal_price": 25800,
+      "original_price": 26800,
+      "discount_rate": 4,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대1,460P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "4,865",
+        "limitQty": "400"
       }
     },
     {
@@ -6732,9 +6732,255 @@
         "11pay 최대666P적립"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "selQty": "4,666",
+        "selQty": "4,667",
+        "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:2489114389",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "참도깨비 부산 가야 물밀면10인분세트(밀면2kg+육수10봉)",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/2489114389/D.webp?241556678",
+      "url": "https://www.11st.co.kr/products/2489114389",
+      "price_label": "타임딜가",
+      "deal_price": 10670,
+      "original_price": 13500,
+      "discount_rate": 21,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대703P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "48",
+        "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:9542016544",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "백억언니 완벽제거 백오프 큐티클리무버+영양오일펜 증정",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9542016544/D.webp?464273271",
+      "url": "https://www.11st.co.kr/products/9542016544",
+      "price_label": "타임딜가",
+      "deal_price": 6200,
+      "original_price": 12400,
+      "discount_rate": 50,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대480P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "17",
+        "limitQty": "500"
+      }
+    },
+    {
+      "id": "11st:9414427912",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "food",
+        "label": "식품",
+        "confidence": 0.78,
+        "rule": "keyword:food"
+      },
+      "title": "쟈뎅 편의점 음료 소용량 파우치 230mlX20",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9414427912/D.webp?633954785",
+      "url": "https://www.11st.co.kr/products/9414427912",
+      "price_label": "타임딜가",
+      "deal_price": 10900,
+      "original_price": 14530,
+      "discount_rate": 25,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대715P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "1,553",
+        "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:7451842806",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "차오차이 레토르트 짜장 혼합 5종 180g 10개입, 1세트",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/7451842806/D.webp?950576566",
+      "url": "https://www.11st.co.kr/products/7451842806",
+      "price_label": "타임딜가",
+      "deal_price": 15900,
+      "original_price": 39800,
+      "discount_rate": 60,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대965P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "872",
+        "limitQty": "350"
+      }
+    },
+    {
+      "id": "11st:1934644464",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "배상면주가 탄산주 빙탄복 370ml 7도 6병입 복분자주",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/1934644464/D.png?457058781",
+      "url": "https://www.11st.co.kr/products/1934644464",
+      "price_label": "타임딜가",
+      "deal_price": 22800,
+      "original_price": 28500,
+      "discount_rate": 20,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대1,310P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "2,830",
+        "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:6379997227",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "숨 천연펄프 소프트블랙 3겹 화장지 30m 30롤 2팩",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/6379997227/D.webp?618424278",
+      "url": "https://www.11st.co.kr/products/6379997227",
+      "price_label": "타임딜가",
+      "deal_price": 17900,
+      "original_price": 20900,
+      "discount_rate": 14,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대1,065P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "19,380",
         "limitQty": "1000"
       }
     },
@@ -6773,10 +7019,133 @@
         "11pay 최대2,750P적립"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
         "selQty": "3",
         "limitQty": "30"
+      }
+    },
+    {
+      "id": "11st:9579409601",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "허니삭스 신학기 데일리 양말 모음전",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9579409601/D.webp?290253809",
+      "url": "https://www.11st.co.kr/products/9579409601",
+      "price_label": "타임딜가",
+      "deal_price": 6210,
+      "original_price": 6900,
+      "discount_rate": 10,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대480P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "0",
+        "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:8905248465",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "food",
+        "label": "식품",
+        "confidence": 0.78,
+        "rule": "keyword:food"
+      },
+      "title": "한우물주먹밥 10팩 골라담기 참치김치/참치마요 외",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/8905248465/D.webp?966110933",
+      "url": "https://www.11st.co.kr/products/8905248465",
+      "price_label": "타임딜가",
+      "deal_price": 10900,
+      "original_price": 15500,
+      "discount_rate": 30,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대715P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "2,239",
+        "limitQty": "1000"
+      }
+    },
+    {
+      "id": "11st:5017165845",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "home",
+        "label": "가구/인테리어",
+        "confidence": 0.78,
+        "rule": "keyword:home"
+      },
+      "title": "잠스쿨 3단 접이식 매트리스",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/5017165845/D.jpg?646000000",
+      "url": "https://www.11st.co.kr/products/5017165845",
+      "price_label": "타임딜가",
+      "deal_price": 119000,
+      "original_price": 140000,
+      "discount_rate": 15,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대6,120P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "0",
+        "limitQty": "300"
       }
     },
     {
@@ -6814,10 +7183,92 @@
         "잔여 1,330"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
         "selQty": "27",
         "limitQty": "1330"
+      }
+    },
+    {
+      "id": "11st:9182441886",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "digital",
+        "label": "디지털/가전",
+        "confidence": 0.78,
+        "rule": "keyword:digital"
+      },
+      "title": "나이스클랍~본사 S/S 시즌오프,역시즌 아우터 특가전",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9182441886/D.webp?40152379",
+      "url": "https://www.11st.co.kr/products/9182441886",
+      "price_label": "타임딜가",
+      "deal_price": 59000,
+      "original_price": 59000,
+      "discount_rate": null,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "11pay 최대3,120P적립",
+        "잔여 75"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "13",
+        "limitQty": "75"
+      }
+    },
+    {
+      "id": "11st:7125267295",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "living",
+        "label": "생활",
+        "confidence": 0.78,
+        "rule": "keyword:living"
+      },
+      "title": "슈퍼딥큐 실내건조 캡슐세제 체험팩 42개+42개 외",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/7125267295/D.jpg?700937873",
+      "url": "https://www.11st.co.kr/products/7125267295",
+      "price_label": "타임딜가",
+      "deal_price": 6500,
+      "original_price": 9280,
+      "discount_rate": 30,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대495P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "2,342",
+        "limitQty": "1000"
       }
     },
     {
@@ -6855,7 +7306,7 @@
         "11pay 최대970P적립"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
         "selQty": "935",
         "limitQty": "500"
@@ -6896,502 +7347,10 @@
         "11pay 최대20,170P적립"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
         "selQty": "1",
         "limitQty": "10"
-      }
-    },
-    {
-      "id": "11st:5017165845",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "home",
-        "label": "가구/인테리어",
-        "confidence": 0.78,
-        "rule": "keyword:home"
-      },
-      "title": "잠스쿨 3단 접이식 매트리스",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/5017165845/D.jpg?646000000",
-      "url": "https://www.11st.co.kr/products/5017165845",
-      "price_label": "타임딜가",
-      "deal_price": 119000,
-      "original_price": 140000,
-      "discount_rate": 15,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대6,120P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "0",
-        "limitQty": "300"
-      }
-    },
-    {
-      "id": "11st:9579409601",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "허니삭스 신학기 데일리 양말 모음전",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9579409601/D.webp?290253809",
-      "url": "https://www.11st.co.kr/products/9579409601",
-      "price_label": "타임딜가",
-      "deal_price": 6210,
-      "original_price": 6900,
-      "discount_rate": 10,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대480P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "0",
-        "limitQty": "1000"
-      }
-    },
-    {
-      "id": "11st:2489114389",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "참도깨비 부산 가야 물밀면10인분세트(밀면2kg+육수10봉)",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/2489114389/D.webp?241556678",
-      "url": "https://www.11st.co.kr/products/2489114389",
-      "price_label": "타임딜가",
-      "deal_price": 10670,
-      "original_price": 13500,
-      "discount_rate": 21,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대703P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "40",
-        "limitQty": "1000"
-      }
-    },
-    {
-      "id": "11st:9182441886",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "digital",
-        "label": "디지털/가전",
-        "confidence": 0.78,
-        "rule": "keyword:digital"
-      },
-      "title": "나이스클랍~본사 S/S 시즌오프,역시즌 아우터 특가전",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9182441886/D.webp?40152379",
-      "url": "https://www.11st.co.kr/products/9182441886",
-      "price_label": "타임딜가",
-      "deal_price": 59000,
-      "original_price": 59000,
-      "discount_rate": null,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "11pay 최대3,120P적립",
-        "잔여 75"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "13",
-        "limitQty": "75"
-      }
-    },
-    {
-      "id": "11st:9542016544",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "백억언니 완벽제거 백오프 큐티클리무버+영양오일펜 증정",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9542016544/D.webp?464273271",
-      "url": "https://www.11st.co.kr/products/9542016544",
-      "price_label": "타임딜가",
-      "deal_price": 6200,
-      "original_price": 12400,
-      "discount_rate": 50,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대480P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "14",
-        "limitQty": "500"
-      }
-    },
-    {
-      "id": "11st:6293949493",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "바이오가이아 프로텍티스 베이비 드롭+비타민D10ml 4개",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/6293949493/D.jpg?380662910",
-      "url": "https://www.11st.co.kr/products/6293949493",
-      "price_label": "타임딜가",
-      "deal_price": 107950,
-      "original_price": 127000,
-      "discount_rate": 15,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대5,567P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "426",
-        "limitQty": "150"
-      }
-    },
-    {
-      "id": "11st:9414427912",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "food",
-        "label": "식품",
-        "confidence": 0.78,
-        "rule": "keyword:food"
-      },
-      "title": "쟈뎅 편의점 음료 소용량 파우치 230mlX20",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/9414427912/D.webp?633954785",
-      "url": "https://www.11st.co.kr/products/9414427912",
-      "price_label": "타임딜가",
-      "deal_price": 10900,
-      "original_price": 14530,
-      "discount_rate": 25,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대715P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "1,540",
-        "limitQty": "1000"
-      }
-    },
-    {
-      "id": "11st:8905248465",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "food",
-        "label": "식품",
-        "confidence": 0.78,
-        "rule": "keyword:food"
-      },
-      "title": "한우물주먹밥 10팩 골라담기 참치김치/참치마요 외",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/8905248465/D.webp?966110933",
-      "url": "https://www.11st.co.kr/products/8905248465",
-      "price_label": "타임딜가",
-      "deal_price": 10900,
-      "original_price": 15500,
-      "discount_rate": 30,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대715P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "2,228",
-        "limitQty": "1000"
-      }
-    },
-    {
-      "id": "11st:7451842806",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "차오차이 레토르트 짜장 혼합 5종 180g 10개입, 1세트",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/7451842806/D.webp?950576566",
-      "url": "https://www.11st.co.kr/products/7451842806",
-      "price_label": "타임딜가",
-      "deal_price": 15900,
-      "original_price": 39800,
-      "discount_rate": 60,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대965P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "865",
-        "limitQty": "350"
-      }
-    },
-    {
-      "id": "11st:7125267295",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "living",
-        "label": "생활",
-        "confidence": 0.78,
-        "rule": "keyword:living"
-      },
-      "title": "슈퍼딥큐 실내건조 캡슐세제 체험팩 42개+42개 외",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/7125267295/D.jpg?700937873",
-      "url": "https://www.11st.co.kr/products/7125267295",
-      "price_label": "타임딜가",
-      "deal_price": 6500,
-      "original_price": 9280,
-      "discount_rate": 30,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대495P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "2,338",
-        "limitQty": "1000"
-      }
-    },
-    {
-      "id": "11st:6379997227",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "숨 천연펄프 소프트블랙 3겹 화장지 30m 30롤 2팩",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/6379997227/D.webp?618424278",
-      "url": "https://www.11st.co.kr/products/6379997227",
-      "price_label": "타임딜가",
-      "deal_price": 17900,
-      "original_price": 20900,
-      "discount_rate": 14,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대1,065P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "19,361",
-        "limitQty": "1000"
-      }
-    },
-    {
-      "id": "11st:1934644464",
-      "source_id": "11st",
-      "source_name": "11번가 타임딜",
-      "deal_type": "타임딜",
-      "accent": "#ef3340",
-      "source_home_url": "https://www.11st.co.kr/",
-      "source_category": {
-        "label": "타임딜",
-        "path": [
-          "홈",
-          "타임딜"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "배상면주가 탄산주 빙탄복 370ml 7도 6병입 복분자주",
-      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/1934644464/D.png?457058781",
-      "url": "https://www.11st.co.kr/products/1934644464",
-      "price_label": "타임딜가",
-      "deal_price": 22800,
-      "original_price": 28500,
-      "discount_rate": 20,
-      "starts_at": "2026-08-30T23:00:00+09:00",
-      "ends_at": "2026-08-31T10:59:59+09:00",
-      "badges": [
-        "타임딜가",
-        "무료배송",
-        "11pay 최대1,310P적립"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {
-        "selQty": "2,825",
-        "limitQty": "1000"
       }
     },
     {
@@ -7429,10 +7388,51 @@
         "11pay 최대1,415P적립"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {
-        "selQty": "184",
+        "selQty": "198",
         "limitQty": "300"
+      }
+    },
+    {
+      "id": "11st:6293949493",
+      "source_id": "11st",
+      "source_name": "11번가 타임딜",
+      "deal_type": "타임딜",
+      "accent": "#ef3340",
+      "source_home_url": "https://www.11st.co.kr/",
+      "source_category": {
+        "label": "타임딜",
+        "path": [
+          "홈",
+          "타임딜"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "바이오가이아 프로텍티스 베이비 드롭+비타민D10ml 4개",
+      "image_url": "https://cdn.011st.com/11dims/resize/720x360/quality/90/11src/product/6293949493/D.jpg?380662910",
+      "url": "https://www.11st.co.kr/products/6293949493",
+      "price_label": "타임딜가",
+      "deal_price": 107950,
+      "original_price": 127000,
+      "discount_rate": 15,
+      "starts_at": "2026-08-30T23:00:00+09:00",
+      "ends_at": "2026-08-31T10:59:59+09:00",
+      "badges": [
+        "타임딜가",
+        "무료배송",
+        "11pay 최대5,567P적립"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {
+        "selQty": "427",
+        "limitQty": "150"
       }
     },
     {
@@ -16530,7 +16530,7 @@
         "쓱특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16567,7 +16567,7 @@
         "제스프리"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16604,7 +16604,7 @@
         "고메프리미엄"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16641,7 +16641,7 @@
         "정관장"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16678,7 +16678,7 @@
         "산과들에"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16705,7 +16705,7 @@
       "image_url": "https://sitem.ssgcdn.com/22/87/21/spclprc/1000216218722_sp.jpg",
       "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000216218722&siteNo=6004&salestrNo=6005",
       "price_label": "쓱특가",
-      "deal_price": 50052,
+      "deal_price": 51600,
       "original_price": null,
       "discount_rate": null,
       "starts_at": null,
@@ -16715,7 +16715,7 @@
         "나이키"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16742,7 +16742,7 @@
       "image_url": "https://sitem.ssgcdn.com/97/86/75/spclprc/1000025758697_sp.jpg",
       "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000025758697&siteNo=6004&salestrNo=6005",
       "price_label": "쓱특가",
-      "deal_price": 94380,
+      "deal_price": 94340,
       "original_price": null,
       "discount_rate": null,
       "starts_at": null,
@@ -16752,7 +16752,7 @@
         "감동"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16789,7 +16789,7 @@
         "룰루레몬"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16826,7 +16826,7 @@
         "한국조폐공사"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16863,7 +16863,7 @@
         "DIOR"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16900,7 +16900,7 @@
         "나이키골프"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16937,7 +16937,7 @@
         "란가구"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -16974,7 +16974,7 @@
         "LiberNovo"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17011,7 +17011,7 @@
         "자코모"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17048,7 +17048,7 @@
         "토리버치"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17085,7 +17085,7 @@
         "우고래빗"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17122,7 +17122,7 @@
         "아디다스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17159,7 +17159,7 @@
         "코오롱스포츠"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17196,7 +17196,7 @@
         "지오다노"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17233,7 +17233,7 @@
         "닌텐도"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17270,7 +17270,7 @@
         "센카"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17307,7 +17307,7 @@
         "쿠쿠"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17344,7 +17344,7 @@
         "생로랑"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17381,7 +17381,7 @@
         "막스마라"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17418,7 +17418,7 @@
         "나인식스뉴욕"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17455,7 +17455,7 @@
         "모던하우스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17492,7 +17492,7 @@
         "아디다스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17529,7 +17529,7 @@
         "폴로 랄프 로렌"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17566,7 +17566,7 @@
         "블루핏"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17603,81 +17603,7 @@
         "수예당"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {}
-    },
-    {
-      "id": "ssg:1000809768851",
-      "source_id": "ssg",
-      "source_name": "SSG 쓱특가",
-      "deal_type": "쓱특가",
-      "accent": "#d71920",
-      "source_home_url": "https://www.ssg.com/page/pc/SpecialPrice/happybuy.ssg",
-      "source_category": {
-        "label": "쓱특가",
-        "path": [
-          "SSG",
-          "쓱특가"
-        ]
-      },
-      "canonical_category": {
-        "id": "digital",
-        "label": "디지털/가전",
-        "confidence": 0.78,
-        "rule": "keyword:digital"
-      },
-      "title": "단독 역시즌 특가전 + S/S 클리어런스",
-      "image_url": "https://sitem.ssgcdn.com/51/88/76/spclprc/1000809768851_sp.jpg",
-      "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000809768851&siteNo=6009&salestrNo=1002",
-      "price_label": "쓱특가",
-      "deal_price": 108800,
-      "original_price": null,
-      "discount_rate": null,
-      "starts_at": null,
-      "ends_at": null,
-      "badges": [
-        "쓱특가",
-        "르니나"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {}
-    },
-    {
-      "id": "ssg:1000797272955",
-      "source_id": "ssg",
-      "source_name": "SSG 쓱특가",
-      "deal_type": "쓱특가",
-      "accent": "#d71920",
-      "source_home_url": "https://www.ssg.com/page/pc/SpecialPrice/happybuy.ssg",
-      "source_category": {
-        "label": "쓱특가",
-        "path": [
-          "SSG",
-          "쓱특가"
-        ]
-      },
-      "canonical_category": {
-        "id": "living",
-        "label": "생활",
-        "confidence": 0.78,
-        "rule": "keyword:living"
-      },
-      "title": "[대림바스] 욕실 리모델링 여름특가",
-      "image_url": "https://sitem.ssgcdn.com/55/29/27/spclprc/1000797272955_sp.jpg",
-      "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000797272955&siteNo=6004&salestrNo=6005",
-      "price_label": "쓱특가",
-      "deal_price": 293480,
-      "original_price": null,
-      "discount_rate": null,
-      "starts_at": null,
-      "ends_at": null,
-      "badges": [
-        "쓱특가",
-        "DAELIM"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17714,7 +17640,81 @@
         "크록스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {}
+    },
+    {
+      "id": "ssg:1000809768851",
+      "source_id": "ssg",
+      "source_name": "SSG 쓱특가",
+      "deal_type": "쓱특가",
+      "accent": "#d71920",
+      "source_home_url": "https://www.ssg.com/page/pc/SpecialPrice/happybuy.ssg",
+      "source_category": {
+        "label": "쓱특가",
+        "path": [
+          "SSG",
+          "쓱특가"
+        ]
+      },
+      "canonical_category": {
+        "id": "digital",
+        "label": "디지털/가전",
+        "confidence": 0.78,
+        "rule": "keyword:digital"
+      },
+      "title": "단독 역시즌 특가전 + S/S 클리어런스",
+      "image_url": "https://sitem.ssgcdn.com/51/88/76/spclprc/1000809768851_sp.jpg",
+      "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000809768851&siteNo=6009&salestrNo=1002",
+      "price_label": "쓱특가",
+      "deal_price": 108800,
+      "original_price": null,
+      "discount_rate": null,
+      "starts_at": null,
+      "ends_at": null,
+      "badges": [
+        "쓱특가",
+        "르니나"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {}
+    },
+    {
+      "id": "ssg:1000797272955",
+      "source_id": "ssg",
+      "source_name": "SSG 쓱특가",
+      "deal_type": "쓱특가",
+      "accent": "#d71920",
+      "source_home_url": "https://www.ssg.com/page/pc/SpecialPrice/happybuy.ssg",
+      "source_category": {
+        "label": "쓱특가",
+        "path": [
+          "SSG",
+          "쓱특가"
+        ]
+      },
+      "canonical_category": {
+        "id": "living",
+        "label": "생활",
+        "confidence": 0.78,
+        "rule": "keyword:living"
+      },
+      "title": "[대림바스] 욕실 리모델링 여름특가",
+      "image_url": "https://sitem.ssgcdn.com/55/29/27/spclprc/1000797272955_sp.jpg",
+      "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000797272955&siteNo=6004&salestrNo=6005",
+      "price_label": "쓱특가",
+      "deal_price": 293480,
+      "original_price": null,
+      "discount_rate": null,
+      "starts_at": null,
+      "ends_at": null,
+      "badges": [
+        "쓱특가",
+        "DAELIM"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17751,7 +17751,7 @@
         "폴로 랄프 로렌"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17788,7 +17788,7 @@
         "시슬리"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17825,7 +17825,7 @@
         "헤지스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17862,7 +17862,7 @@
         "삼성"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17899,7 +17899,7 @@
         "가민"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17936,7 +17936,7 @@
         "룩캐스트"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -17973,7 +17973,7 @@
         "케라시스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18010,7 +18010,7 @@
         "타고가요"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18047,7 +18047,7 @@
         "샬랑 드 파리"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18084,7 +18084,7 @@
         "펠틱스"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18121,7 +18121,7 @@
         "브리츠"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18158,7 +18158,7 @@
         "샹떼클레어"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18195,7 +18195,7 @@
         "버버리힐스폴로클럽"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18232,7 +18232,7 @@
         "대현상회"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18269,7 +18269,7 @@
         "네파"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18306,7 +18306,43 @@
         "샤오미"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
+      "raw_excerpt": {}
+    },
+    {
+      "id": "ssg:1000874460836",
+      "source_id": "ssg",
+      "source_name": "SSG 쓱특가",
+      "deal_type": "쓱특가",
+      "accent": "#d71920",
+      "source_home_url": "https://www.ssg.com/page/pc/SpecialPrice/happybuy.ssg",
+      "source_category": {
+        "label": "쓱특가",
+        "path": [
+          "SSG",
+          "쓱특가"
+        ]
+      },
+      "canonical_category": {
+        "id": "other",
+        "label": "기타",
+        "confidence": 0.35,
+        "rule": "fallback"
+      },
+      "title": "[1000개한정] 도이캄 파격 할인 행사",
+      "image_url": "https://sitem.ssgcdn.com/36/08/46/spclprc/1000874460836_sp.jpg",
+      "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000874460836&siteNo=6004&salestrNo=6005",
+      "price_label": "쓱특가",
+      "deal_price": 71280,
+      "original_price": null,
+      "discount_rate": null,
+      "starts_at": null,
+      "ends_at": null,
+      "badges": [
+        "쓱특가"
+      ],
+      "status": "판매중",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18343,43 +18379,7 @@
         "삼진어묵"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
-      "raw_excerpt": {}
-    },
-    {
-      "id": "ssg:1000874460836",
-      "source_id": "ssg",
-      "source_name": "SSG 쓱특가",
-      "deal_type": "쓱특가",
-      "accent": "#d71920",
-      "source_home_url": "https://www.ssg.com/page/pc/SpecialPrice/happybuy.ssg",
-      "source_category": {
-        "label": "쓱특가",
-        "path": [
-          "SSG",
-          "쓱특가"
-        ]
-      },
-      "canonical_category": {
-        "id": "other",
-        "label": "기타",
-        "confidence": 0.35,
-        "rule": "fallback"
-      },
-      "title": "[1000개한정] 도이캄 파격 할인 행사",
-      "image_url": "https://sitem.ssgcdn.com/36/08/46/spclprc/1000874460836_sp.jpg",
-      "url": "https://www.ssg.com/item/dealItemView.ssg?itemId=1000874460836&siteNo=6004&salestrNo=6005",
-      "price_label": "쓱특가",
-      "deal_price": 71280,
-      "original_price": null,
-      "discount_rate": null,
-      "starts_at": null,
-      "ends_at": null,
-      "badges": [
-        "쓱특가"
-      ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18415,7 +18415,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18451,7 +18451,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18487,7 +18487,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18523,7 +18523,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18559,7 +18559,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18595,7 +18595,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18631,7 +18631,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18667,7 +18667,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18703,7 +18703,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18739,7 +18739,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18775,7 +18775,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18811,7 +18811,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18847,7 +18847,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18883,7 +18883,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18919,7 +18919,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18955,7 +18955,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -18991,7 +18991,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19027,7 +19027,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19063,7 +19063,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19099,7 +19099,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19135,7 +19135,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19171,7 +19171,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19207,7 +19207,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19243,7 +19243,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19279,7 +19279,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19315,7 +19315,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19351,7 +19351,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19387,7 +19387,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19411,7 +19411,7 @@
         "rule": "keyword:fashion"
       },
       "title": "[조르쥬 레쉬] 26FW 버튼 포인트 카라 니트 4종",
-      "image_url": "https://contents.lotteon.com/itemimage/20260831013707/LI/12/91/68/21/_1/LI12916821_1_1.jpg",
+      "image_url": "https://contents.lotteon.com/itemimage/20260831045635/LI/12/91/68/21/_1/LI12916821_1_1.jpg",
       "url": "https://www.lotteon.com/p/product/LI12916821",
       "price_label": "쇼핑특가",
       "deal_price": 69900,
@@ -19423,7 +19423,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19459,7 +19459,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19495,7 +19495,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19531,7 +19531,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19567,7 +19567,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19603,7 +19603,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19639,7 +19639,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19675,7 +19675,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19711,7 +19711,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19747,7 +19747,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19783,7 +19783,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19819,7 +19819,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19855,7 +19855,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19891,7 +19891,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19927,7 +19927,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19963,7 +19963,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -19999,7 +19999,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20035,7 +20035,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20071,7 +20071,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20107,7 +20107,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20143,7 +20143,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20179,7 +20179,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20215,7 +20215,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20251,7 +20251,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20287,7 +20287,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20323,7 +20323,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20359,7 +20359,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20395,7 +20395,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20431,7 +20431,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20467,7 +20467,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20503,7 +20503,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20539,7 +20539,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20575,7 +20575,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20611,7 +20611,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20647,7 +20647,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20683,7 +20683,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20719,7 +20719,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20755,7 +20755,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20791,7 +20791,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20827,7 +20827,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20863,7 +20863,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20899,7 +20899,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20935,7 +20935,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -20971,7 +20971,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21007,7 +21007,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21043,7 +21043,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21079,7 +21079,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21115,7 +21115,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21151,7 +21151,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21187,7 +21187,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21223,7 +21223,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21259,7 +21259,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21295,7 +21295,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21331,7 +21331,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21367,7 +21367,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21403,7 +21403,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21439,7 +21439,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21475,7 +21475,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21511,7 +21511,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21547,7 +21547,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21583,7 +21583,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21619,7 +21619,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21655,7 +21655,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21691,7 +21691,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21727,7 +21727,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21763,7 +21763,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21799,7 +21799,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21835,7 +21835,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21871,7 +21871,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21907,7 +21907,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21943,7 +21943,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -21979,7 +21979,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22015,7 +22015,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22051,7 +22051,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22087,7 +22087,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22123,7 +22123,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22159,7 +22159,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22195,7 +22195,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22231,7 +22231,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22267,7 +22267,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22303,7 +22303,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22339,7 +22339,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22375,7 +22375,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22411,7 +22411,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22447,7 +22447,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22483,7 +22483,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22519,7 +22519,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22555,7 +22555,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22591,7 +22591,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22627,7 +22627,7 @@
         "쇼핑특가"
       ],
       "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     },
     {
@@ -22662,8 +22662,8 @@
       "badges": [
         "쇼핑특가"
       ],
-      "status": "판매중",
-      "checked_at": "2026-08-30T17:07:54.786824+00:00",
+      "status": "품절",
+      "checked_at": "2026-08-30T20:24:48.464776+00:00",
       "raw_excerpt": {}
     }
   ]
